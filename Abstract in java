@@ -1,0 +1,37 @@
+abstract class Shape{
+     abstract public void Compute_area();
+     abstract public void Calculate();
+   }
+class Triangle extends Shape{
+     int base;
+     int height;
+     public void Compute_area(int base, int height){
+           this.base = base;
+           this.height = height;
+    }
+    void Calculate(){
+           System.out.println(0.5*(base*height));
+       }
+    } 
+class Rectangle extends Shape{     
+     public int lenght;
+     public int breadth;
+     public void Compute_area(int length,int breadth){
+            this.lenght = lenght;
+            this.breadth = breadth;
+         }
+         void Calculate(){
+         System.out.println(lenght*breadth);
+       }
+    }
+class Abstract{
+         public static void main(String args[]){
+            Triangle t1 = new Triangle(2,6);
+            Rectangle t2 = new Rectangle(5,9);
+            t1.Compute_area();
+           
+            t2.Compute_area();
+           t1.Calculate();
+           t2.Calculate();
+         }
+    }
