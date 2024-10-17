@@ -1,0 +1,29 @@
+class Publication {
+    protected String title;
+    protected double price;
+    protected int copies;
+
+    public Publication(String title, double price, int copies) {
+        this.title = title;
+        this.price = price;
+        this.copies = copies;
+    }
+
+    public double saleCopy(int numberOfCopies) {
+        return numberOfCopies * price;
+    }
+
+    public void display() {
+        System.out.println("Title: " + title);
+        System.out.println("Price: " + price);
+        System.out.println("Copies: " + copies);
+    }
+}
+
+class book extends publication
+    private String author;
+
+    public Book(String title, double price, int copies, String author) {
+        super(title, price, copies);
+        this.author = author;
+    }
